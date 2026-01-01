@@ -1,0 +1,150 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-initial-schema
+      author: aldo
+      preConditions:
+          - dbms:
+              type: postgresql
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: email
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: username
+                  type: VARCHAR(255)
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+
+        - createTable:
+            tableName: category
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: icon
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                    name: color
+                    type: VARCHAR(50)
+                    constraints:
+                        nullable: false
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+
+        - addForeignKeyConstraint:
+            baseTableName: category
+            baseColumnNames: user_id
+            referencedTableName: users
+            referencedColumnNames: id
+            constraintName: fk_category_user
+
+        - createTable:
+            tableName: roadmap_item
+            columns:
+                - column:
+                    name: id
+                    type: BIGINT
+                    autoIncrement: true
+                    constraints:
+                      primaryKey: true
+                      nullable: false
+                - column:
+                    name: title
+                    type: VARCHAR(255)
+                - column:
+                    name: description
+                    type: TEXT
+                - column:
+                    name: status
+                    type: VARCHAR(50)
+                - column:
+                    name: progress
+                    type: INTEGER
+                - column:
+                    name: category_id
+                    type: BIGINT
+                - column:
+                    name: learned
+                    type: TEXT
+                - column:
+                    name: application
+                    type: TEXT
+                - column:
+                    name: additions
+                    type: TEXT
+
+        - addForeignKeyConstraint:
+            baseTableName: roadmap_item
+            baseColumnNames: category_id
+            referencedTableName: category
+            referencedColumnNames: id
+            constraintName: fk_roadmap_item_category
+            onDelete: CASCADE
+
+        - createTable:
+            tableName: tokens
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: token
+                  type: VARCHAR(255)
+                  constraints:
+                    unique: true
+              - column:
+                  name: token_type
+                  type: VARCHAR(50)
+              - column:
+                  name: revoked
+                  type: BOOLEAN
+                  defaultValueBoolean: false
+              - column:
+                  name: expired
+                  type: BOOLEAN
+                  defaultValueBoolean: false
+              - column:
+                  name: user_id
+                  type: BIGINT
+
+        - addForeignKeyConstraint:
+            baseTableName: tokens
+            baseColumnNames: user_id
+            referencedTableName: users
+            referencedColumnNames: id
+            constraintName: fk_tokens_user

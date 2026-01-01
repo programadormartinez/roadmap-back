@@ -1,0 +1,1418 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-insert-roadmap-from-spring-boot-data
+      author: aldo
+      preConditions:
+        - dbms:
+            type: postgresql
+      changes:
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Ser experto en dar iniciativas de solución con Java Spring Boot"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Entender y ser capaz de implementar arquitecturas en Microservicios."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Entender y ser capaz de implementar arquitecturas en Hexagonal y Clean."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Realizar implementaciones Cloud AWS como lambdas, S3, Dynamodb y más."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Realizar implementaciones Cloud AZURE como functions, Blob Storage y más."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Suficiente conocimiento para poder realizar pruebas unitarias y pruebas estáticas con SonarQube."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Revisión de Fundamentos y Configuración Avanzada"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Repaso rápido de los conceptos básicos de Spring Boot."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Uso avanzado de application.properties y application.yml."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Perfiles de configuración (@Profile) y estrategias de implementación."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Externalización de configuraciones (configuración con servidores como Spring Cloud Config)."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Configuración y manejo avanzado de beans en Spring (@Conditional, @Lazy, @Scope)."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Aspectos Avanzados de RESTful APIs"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Eventos y E/S asincrónica (Promesas, async/await)"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Validación avanzada de datos con @Valid y validadores personalizados."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Construyendo un Api Rest con Spring Boot"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Desarrollo de un API REST con (GET, POST, PUT, DELETE)"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Uso de @RestController, @RequestMapping, @PathVariable, @RequestBody"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Manejo de errores (@ExceptionHandler, validaciones)"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Documentación de APIs (Swagger/OpenAPI) Pruebas con Postman o Swagger"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Persistencia con Base de datos"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Spring Data JPA y su implementación"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Estrategias avanzadas de transacciones (propagación, aislamiento)."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Integración de Api Rest con db MongoDB"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Almacenamiento en Caché Redis"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Microservicios"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Fundamentos de una arquitectura de microservicios"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Estructura de un microservicio Spring Boot"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Dependencias: Spring Web, Spring DevTools, Spring Actuator"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Manejo de errores en Microservicios (@ExceptionHandler, validaciones)"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Configuración por entorno (application.properties, @Value, @ConfigurationProperties)"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Inyección por Dependencia"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Microservicios con MongoDB Dockerización de microservicios"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Comunicación entre microservicios"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Uso de RestTemplate y WebClient (Spring WebFlux)"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Arquitectura Avanzada"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Diseño de aplicaciones con arquitectura hexagonal."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Diseño de aplicaciones con arquitectura limpia."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Uso de DDD (Domain-Driven Design) en proyectos Spring Boot."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Patrón CǪRS (Command Ǫuery Responsibility Segregation) en Spring Boot."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Spring for GraphǪL"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Entendiendo GraphǪL"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "REST vd GraphǪL"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "GraphǪL Ǫuery"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "CRUD GraphǪL"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Spring Cloud"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Spring Eureka Server."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Spring Cloud Config"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Spring Cloud Circuit Breaker"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Pruebas Unitarias y Pruebas Estáticas"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Pruebas unitarias con JUnit"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Pruebas unitarias con Mockito"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Análisis de código estático de un proyecto Java con SonarǪube"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Pruebas de integración y pruebas funcionales"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Seguridad en Cloud"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Autenticación y autorización con JWT"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Usando Secret Manager AWS en aplicaciones Spring Boot"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Usando Key Vault Azure en aplicaciones Spring Boot"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Serverless en Azure"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Configuración del SDK y Maven/Gradle"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Creación de recurso en Azure Portal"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Instalación y uso básico de Azure CLI"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Crear un contenedor en Azure"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Conexión segura con Azure Identity"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Desplegar la función desde VS Code o CLI"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Subir App con WAR/JAR a Azure App Service"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Despliegue por consola de un microservicio usando Function Azure."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Persistencia y despliegue en Azure"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Elegir modelo NoSǪL vs relacional"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "SDK Java para Cosmos DB"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "JDBC para Azure SǪL Database"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Conexión con Azure Cosmos DB"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Conexión con Azure Blob Storage"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Guardar conexión a DB en Key Vault"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Leer secretos desde Java (usando Azure Identity)"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Application Insights para logs"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Diagnóstico y métricas básicas"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Pipeline de despliegue simple con GitHub Actions o Azure DevOps"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Serverless en AWS"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Explicación de los SDK de AWS"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "SDK de AWS para Java (AWS SDK v2)"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Configuración del SDK (credenciales, región)"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Uso de AWS CLI para pruebas rápidas"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Creación de Lambda AWS con Spring Boot."
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Configuración de lamba en Api Gateway AWS"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Authorizadores con Cognito AWS en Api Gateway"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Pruebas en entorno local de lambda con SAM (AWS Serverless Application Model) Configuración de Lambda AWS con ApiGateway AWS"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Despliegue por consola de un microservicio usando Lambda AWS"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Persistencia y despliegue en AWS"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Conectar y consumir DynamoDB (PutItem, GetItem) con SDK"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Conectar y consumir files con S3 usando SDK"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Conectar y consumir AWS RDS con Postgres"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Logs con CloudWatch desde Lambda"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"
+        - insert:
+            tableName: roadmap_item
+            columns:
+              - column:
+                  name: title
+                  value: "Pipeline de despliegue simple con GitHub Actions o Azure DevOps"
+              - column:
+                  name: status
+                  value: "PENDING"
+              - column:
+                  name: progress
+                  valueNumeric: 0
+              - column:
+                  name: category_id
+                  valueComputed: "(select id from category where name='Java Spring Boot')"

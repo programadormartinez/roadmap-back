@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-insert-spring-boot-data
+      author: aldo
+      preConditions:
+        - dbms:
+            type: postgresql
+      changes:
+        - insert:
+            tableName: category
+            columns:
+              - column:
+                  name: name
+                  value: "Java Spring Boot"
+              - column:
+                  name: icon
+                  value: "book"
+              - column:
+                  name: color
+                  value: "#1976D2"
+              - column:
+                  name: user_id
+                  valueComputed: "(select id from users where email='programadormartinez@gmail.com')"
