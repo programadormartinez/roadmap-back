@@ -5,6 +5,7 @@ import com.roadmap.my.myroadmapback.model.User;
 import com.roadmap.my.myroadmapback.repository.TokenRepository;
 import com.roadmap.my.myroadmapback.repository.UserRepository;
 import com.roadmap.my.myroadmapback.service.JwtService;
+import io.jsonwebtoken.JwtException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -42,7 +43,12 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             return;
         }
         final String jwtToken = authHeader.substring(7);
-        final String userEmail = jwtService.extractUsername(jwtToken);
+        String userEmail = null;
+        try {
+            userEmail = jwtService.extractUsername(jwtToken);
+        } catch (JwtException e) {
+            // Token is expired or invalid
+        }
 
         if (userEmail == null || SecurityContextHolder.getContext().getAuthentication() != null) {
             filterChain.doFilter(request, response);
